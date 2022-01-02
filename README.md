@@ -3,6 +3,8 @@
 A binary, encrypted, authenticated token format called a
 *Sign-Cryption Token* aka SCT.
 
+**NOTE: This is a preliminary sketch of an idea open for public comment.  You should not use this unless you understand the risks of new, untested cryptographic software.**
+
 ## SCT version 0x0000
 
  - SCT requires `libsodium`, including the additional function
