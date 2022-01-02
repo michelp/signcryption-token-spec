@@ -121,6 +121,8 @@ postgres=# select crypto_signcrypt_token(:'bob_pk', :'alice_pk', :'bob_sk', :'al
 
 ## Rational and Comparisons
 
+**The following section are my personal opinions and motivations.**
+
 "Perfection is achieved, not when there is nothing more to add, but
 when there is nothing left to take away." - Antoine de Saint Exupery
 
