@@ -3,7 +3,7 @@
 A binary, encrypted, authenticated token format called a
 *Sign-Cryption Token* aka SCT.
 
-**NOTE: This is a preliminary sketch of an idea open for public comment.  You should not use this unless you understand the risks of new, untested cryptographic software.**
+**NOTE: This is a preliminary sketch of an idea open for public comment.  You should not use this unless you understand the risks of using new and untested cryptographic software.**
 
 ## SCT version 0x0000
 
