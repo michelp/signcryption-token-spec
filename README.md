@@ -8,8 +8,8 @@ A binary, encrypted, authenticated token format called a
 ## SCT version 0x0000
 
  - SCT requires `libsodium`, including the additional function
-   libraries in `libsodium-xchacha20-siv` and
-   `libsodium-signcryption`.
+   libraries in [`libsodium-xchacha20-siv`](https://github.com/jedisct1/libsodium-xchacha20-siv) and
+   [`libsodium-signcryption`](https://github.com/jedisct1/libsodium-signcryption).
 
  - SCTs have an encrypted payload and unencrypted authenticated
    additional data payload. Either payload, but not both may be empty.
@@ -40,7 +40,7 @@ A binary, encrypted, authenticated token format called a
    array. Encoding payloads to and from formats like JSON to a byte
    representation is a trivial operation and entirely up to the user.
    
- - The output of SCT is a byte string of four encoded base64 sections:
+ - The output of SCT is a byte string of five encoded base64 sections:
  
    `<version>.<sender_id>.<ciphertext>.<context>.<signature>`
    
@@ -137,7 +137,7 @@ token "purposes" in an attempt to fool the server with the same kind
 of algorithm confusion attacks.
 
 So, PASETO version 3 and 4 put a new section in their spec about
-"Algorithm Lucidity" and how every language MUST use whatever type
+["Algorithm Lucidity"](https://github.com/paseto-standard/paseto-spec/blob/master/docs/02-Implementation-Guide/03-Algorithm-Lucidity.md) and how every language MUST use whatever type
 enforcement features exist to safeguard against using the wrong key
 for the wrong purpose.
 
@@ -168,6 +168,6 @@ data.  If you have the recipient's secret key, you can decrypt it, but
 anyone with the senders public key can authenticate it.
 
 One last thing I personally don't like about JWT and PASETO is their
-focus on JSON payloads.  SCT payloads are *bytes*.  If you want to
-encode your JSON into bytes, go for it, every language in the world
+focus on JSON payloads.  SCT payloads are *bytes*, not JSON or protobuf nor any other specific format.  If you want to
+encode your data into bytes, go for it, every language in the world
 can trivially do that. But JSON is *not required*.
