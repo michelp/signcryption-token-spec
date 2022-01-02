@@ -1,9 +1,3 @@
-# signcryption-token-spec
-A binary, encrypted, authenticated token format called a *Sign-Cryption Token* aka SCT.
-
-
-While adding `libsodium-signcryption`, `libsodium-xchacha20-siv` and support for helpers like `sodium_bin2base64` to pgsodium it occurred to me that signcryption could be an excellent basis for a libsodium token format, so I typed up my thoughts for discussion.  If this isn't the appropriate forum for discussion lmk and I'll move it.
-
 # SCT: Libsodium Sign-Cryption Token
 
 A binary, encrypted, authenticated token format called a
