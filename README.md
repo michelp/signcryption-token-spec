@@ -7,7 +7,7 @@ A binary, encrypted, authenticated token format called a
 
 ## SCT version 0x0000
 
- - SCT requires `libsodium`, including the additional function
+ - SCT requires [`libsodium`](https://github.com/jedisct1/libsodium), including the additional function
    libraries in [`libsodium-xchacha20-siv`](https://github.com/jedisct1/libsodium-xchacha20-siv) and
    [`libsodium-signcryption`](https://github.com/jedisct1/libsodium-signcryption).
 
